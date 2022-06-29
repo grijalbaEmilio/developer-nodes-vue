@@ -1,0 +1,44 @@
+#draw{
+    display: flex;
+    flex-direction: column;
+}
+
+.main-path{
+    /* luis */
+    /* transform : translate(-100%) */
+}
+
+input{
+     /* luis */
+    width: 90%;
+}
+
+.buttons{
+    display: flex;
+    position: fixed;
+    top : 30px;
+    flex-direction: row;
+    z-index: 80;
+    width: 100%;
+    justify-content: center;
+}
+
+.buttons > button{
+    padding : 5px 12px;
+    font-size: 1.1rem;
+    margin : 5px;
+    border: none;
+    border-radius: 5px;
+    background-color : var(--button-info-color);
+    color: var(--button-info-color-text);
+    border : 2px solid var(--button-info-color-text);
+}
+
+.buttons > button:hover{
+    transition: .5s ;
+    background-color : var(--button-info-color-hover);
+    color: var(--button-info-color-text-hover);
+    border : 2px solid var(--button-info-color-text-hover);
+    padding : 1px 7px;
+    font-size: 1.4rem;
+}

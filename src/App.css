@@ -1,0 +1,21 @@
+:root{
+    --button-info-color : #0084ff;
+    --button-info-color-hover : white;
+    --button-info-color-text : white;
+    --button-info-color-text-hover : #0084ff;
+}
+
+#app{
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+}
+
+#drawflow, .drawflow, body{
+    height: 100vh;
+  }
+  
+  body{
+    margin: 0;
+    padding: 0;
+  }
+    
