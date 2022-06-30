@@ -3,6 +3,8 @@
     --button-info-color-hover : white;
     --button-info-color-text : white;
     --button-info-color-text-hover : #0084ff;
+    --input-color : white;
+    --input-color-text : black;
 }
 
 #app{

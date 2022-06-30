@@ -11,6 +11,11 @@
 input{
      /* luis */
     width: 90%;
+    border: none;
+    border-radius: 10px;
+    padding : 5px;
+    background-color: var(--input-color);
+    color : var(--input-color-text)
 }
 
 .buttons{
@@ -41,4 +46,12 @@ input{
     border : 2px solid var(--button-info-color-text-hover);
     padding : 1px 7px;
     font-size: 1.4rem;
+}
+
+.nodeDraw{
+    border-radius: 20px !important;
+}
+
+hr{
+    color: #b1aeae9f;
 }
