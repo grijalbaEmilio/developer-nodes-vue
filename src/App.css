@@ -5,6 +5,10 @@
     --button-info-color-text-hover : #0084ff;
     --input-color : white;
     --input-color-text : black;
+    --button-aside-color : #241B2F;
+    --button-aside-color-text : white;
+    --aside-content-color : #241B2F;
+    --aside-color-title-text : #d8d8d8;
 }
 
 #app{

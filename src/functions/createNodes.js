@@ -1,33 +1,33 @@
 export function createNodeNum(editor) {
     const html = `
-    <div><label>Número</label><input type="number" df-name></div>
+    <div><label>Número</label><input type="number" df-value></div>
     `;
-    const data = { "name": '0' };
+    const data = { "value": '0' };
     editor.addNode('num', 0, 1, 50, 100, 'nodeNum nodeDraw', data, html);
 }
 
 export function createNodeSum(editor) {
     const html = `
-    <div><label>Suma</label><input id='uno' type="text" disabled=true df-name></div>
+    <div><label>Suma</label><input id='uno' type="text" disabled=true df-value></div>
     `;
-    const data = { "name": '0' };
+    const data = { "value": '0' };
     editor.addNode('sum', 2, 1, 200, 100, 'nodeSum nodeDraw', data, html);
 
 }
 
 export function createNodeMultiplication(editor) {
     const html = `
-    <div><label>Multiplicación</label><input type="text" disabled=true df-name></div>
+    <div><label>Multiplicación</label><input type="text" disabled=true df-value></div>
     `;
-    const data = { "name": '0' };
+    const data = { "value": '0' };
     editor.addNode('multiplication', 2, 1, 250, 100, 'nodeMultiplication nodeDraw', data, html);
 }
 
 export function createNodeDivision(editor) {
     const html = `
-    <div><label>División</label><input type="text" disabled=true df-name></div>
+    <div><label>División</label><input type="text" disabled=true df-value></div>
     `;
-    const data = { "name": '0' };
+    const data = { "value": '0' };
     editor.addNode('division', 2, 1, 300, 100, 'nodedivision nodeDraw', data, html);
 }
 
