@@ -8,10 +8,19 @@ export function createNodeNum(editor) {
 
 export function createNodeSum(editor) {
     const html = `
-    <div><label>Suma</label><input id='uno' type="text" disabled=true df-value></div>
+    <div><label>Suma</label><input type="text" disabled=true df-value></div>
     `;
     const data = { "value": '0' };
     editor.addNode('sum', 2, 1, 200, 100, 'nodeSum nodeDraw', data, html);
+
+}
+
+export function createNodeSubstract(editor) {
+    const html = `
+    <div><label>Resta</label><input type="text" disabled=true df-value></div>
+    `;
+    const data = { "value": '0' };
+    editor.addNode('substract', 2, 1, 200, 200, 'nodeSubstract nodeDraw', data, html);
 
 }
 
@@ -41,7 +50,7 @@ export function createNodeVari(editor) {
     </div>
     `;
     const data = { "name": '', "value" : '0' };
-    editor.addNode('vari', 1, 0, 100, 100, 'nodevari nodeDraw', data, html);
+    editor.addNode('vari', 1, 1, 100, 100, 'nodevari nodeDraw', data, html);
 }
 
 export function createNodeAssign(editor) {

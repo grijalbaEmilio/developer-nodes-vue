@@ -13,13 +13,6 @@
     import './Aside.css'
     import CodePython from '../../class/CodePytho'
 
-    console.log('holaaa');
-    setTimeout(()=>{
-        const aside = document.querySelector('.aside')
-        console.log(aside);
-    
-    }, 100)
-
     function toggleContentVisivility(){
         document.querySelector('.aside-content').classList.toggle('hidden-content')
         document.querySelector('.aside').classList.toggle('hidden-aside')
@@ -33,18 +26,18 @@
             toggleContentVisivility,
             generateCodePython : (dataNodesString)=>{
                     const nueva = new CodePython(dataNodesString)
-                    return  nueva.nodes
+                    
+                    return  nueva.getVarisDeclare()
                     }
-
         },
         props: {
             dataNodes : String,
             functionHiddenAside : Function
         },
-        setup(props){
+        /* setup(props){
             console.log('data -->',props.dataNodes);
             console.log('render -->',props.render);
-        },
+        }, */
         data() {
             return {
                 

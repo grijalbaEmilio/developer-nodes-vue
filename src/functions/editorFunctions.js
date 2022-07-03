@@ -24,6 +24,46 @@ export function nodeSum(editor) {
     }
 }
 
+/**
+ * @param {DrawflowObject} editor 
+ */
+export function nodeSubstraction(editor) {
+    const nodes = editor.export().drawflow.Home.data
+    for (const key in nodes) {
+
+        //si el nodo es suma
+        if (nodes[key].name === "substract") {
+            let num1 = 0
+            let num2 = 0
+            let result = 0
+            //en caso de no tener conexiones actualizamos el valor a 0
+            editor.updateNodeDataFromId(nodes[key].id, { value: 0 })
+
+            // recorremos las entradas 
+            for (const i in nodes[key].inputs) {
+                // recorremos las conexiones de cada entrada
+
+                if (i === 'input_1') {
+                    nodes[key].inputs[i].connections.forEach((e) => {
+                        if (parseFloat(editor.getNodeFromId(e.node).data.value)) {
+                            num1 = parseFloat(editor.getNodeFromId(e.node).data.value)
+                        }
+                    })
+                }
+                if (i === 'input_2') {
+                    nodes[key].inputs[i].connections.forEach((e) => {
+                        if (parseFloat(editor.getNodeFromId(e.node).data.value)) {
+                            num2 = parseFloat(editor.getNodeFromId(e.node).data.value)
+                        }
+                    })
+                }
+            }
+            result = num1 - num2
+            editor.updateNodeDataFromId(nodes[key].id, { value: result })
+        }
+    }
+}
+
 export function nodeMultiplication(editor) {
     const nodes = editor.export().drawflow.Home.data
     for (const key in nodes) {
@@ -155,8 +195,9 @@ export function removeDuplicateInputsOutputs(editor) {
         //output será la clase de la salida
         for (const output in outputs) {
             const connectionsOutput = nodes[key].outputs[output].connections
-            //si algún input tiene más de una entrada
-            if (connectionsOutput.length > 1) {
+            //si algún input tiene más de una entrada y el nodo no es de tipo variable (las variables 
+            //podrán tener múñtiples salidas)
+            if (connectionsOutput.length > 1 && nodes[key].name != 'vari') {
                 for (let index = 0; index < connectionsOutput.length; index++) {
                     //dejamos la primera entrada
                     if (index > 0) {
