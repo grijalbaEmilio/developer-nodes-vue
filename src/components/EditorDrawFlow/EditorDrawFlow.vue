@@ -1,9 +1,12 @@
 <template>
     <div id="draw">
 
+    <div class="buttons function-back">
+        <button class="buttons-function-back" title="Guardar el programa actula." v-on:click="saveProgram('data', actualiceDataEditor())" >Guardar</button>
+        <button class="buttons-function-back" title="Crea un número con valor por defecto CERO." v-on:click="hiddenModal" >Cargar</button>
+    </div>
+
     <div class="buttons">
-            <button title="Guardar el programa actula." v-on:click="save" >Guardar</button>
-            <button title="Crea un número con valor por defecto CERO." v-on:click="load" >Cargar</button>
             <button title="Crea un número con valor por defecto CERO." v-on:click="printNodeNum" >Número</button>
             <button title='Podrá modificar su nombre manualmente y su valor con un nodo "ASIGNACIÓN".' v-on:click="printNodeVari">Variable</button>
             <button title="Resive un valor por la izquierda y conecta con una variable por derecha." v-on:click="printNodeAssign">Asignación</button>
@@ -13,15 +16,17 @@
             <button title="Resive numerador y denominador, retorna el cociente." v-on:click="printNodeDivision">División</button>
     </div>
     
-    <Aside v-bind:dataNodes="dataNodes" :functionHiddenAside="functionHiddenAside" /> 
+    <Aside v-bind:dataNodes="dataNodes" :actualiceDataEditor="actualiceDataEditor" /> 
+    <ModalSaveLoadVue v-if="modalVisibility" :hiddenModal="hiddenModal"/>
     <!-- <component v-bind:is="currentTabComponent"></component> -->
-
     </div>
 </template>
     
 <script>
 import * as Vue from 'vue'
 import Drawflow from 'drawflow'
+import ModalSaveLoadVue from '../modalSaveLoad'
+import {saveProgram} from '../../api/programsApi'
 import {nodeSum, nodeSubstraction, nodeMultiplication, nodeDivision, nodeAssign, 
 removeDuplicateInputsOutputs, nodevari} from '../../functions/editorFunctions'
 import {createNodeNum, createNodeSum, createNodeSubstract, createNodeMultiplication, 
@@ -29,6 +34,7 @@ createNodeDivision, createNodeVari, createNodeAssign} from '../../functions/crea
 import Aside from '../Aside'
 import 'drawflow/dist/drawflow.min.css'
 import './EditorDrawFlow.css'
+
 
 let editor = ''
 setTimeout(() => {
@@ -50,6 +56,7 @@ setTimeout(() => {
         nodeAssign(editor)
         removeDuplicateInputsOutputs(editor)
         nodevari(editor)
+
     })
 
     //console.log('editor iniciado');
@@ -83,6 +90,7 @@ const printNodeAssign = () =>{
     createNodeAssign(editor)
 }
 
+
 export default {
     name : "EditorDrawFlow",
     methods : {
@@ -93,9 +101,10 @@ export default {
         printNodeDivision,
         printNodeVari,
         printNodeAssign,
-        functionHiddenAside(){
+        actualiceDataEditor(){
             //modificamos el contenido de el props que enviamos a ASIDE
             this.dataNodes = JSON.stringify(editor.export().drawflow.Home.data)
+            return this.dataNodes
         },
         save(){
             localStorage.setItem('editor',JSON.stringify(editor.export()))
@@ -105,12 +114,16 @@ export default {
             editor.import(JSON.parse(localStorage.getItem('editor')))
             this.dataNodes = JSON.stringify(editor.export().drawflow.Home.data)
             //console.log(editor.export().drawflow.Home.data);
-        }
-
-
+        },
+        hiddenModal(){
+            this.modalVisibility = !this.modalVisibility
+        },
+        saveProgram
     },
     components : {
-        Aside/* ,
+        Aside,
+        ModalSaveLoadVue
+        /* ,
         Other :{
             name : 'otherCompo',
             template : "<template>Hola</template>",
@@ -119,7 +132,8 @@ export default {
     },
     data(){
         return{
-            dataNodes : 'editor'
+            dataNodes : 'editor',
+            modalVisibility : false
         }
     }
 }

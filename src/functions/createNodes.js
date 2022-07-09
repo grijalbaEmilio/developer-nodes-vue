@@ -3,7 +3,7 @@ export function createNodeNum(editor) {
     <div><label>Número</label><input type="number" df-value></div>
     `;
     const data = { "value": '0' };
-    editor.addNode('num', 0, 1, 50, 100, 'nodeNum nodeDraw', data, html);
+    editor.addNode('num', 0, 1, 50, 0, 'nodeNum nodeDraw', data, html);
 }
 
 export function createNodeSum(editor) {
@@ -11,7 +11,7 @@ export function createNodeSum(editor) {
     <div><label>Suma</label><input type="text" disabled=true df-value></div>
     `;
     const data = { "value": '0' };
-    editor.addNode('sum', 2, 1, 200, 100, 'nodeSum nodeDraw', data, html);
+    editor.addNode('sum', 2, 1, 50, 150, 'nodeSum nodeDraw', data, html);
 
 }
 
@@ -20,7 +20,7 @@ export function createNodeSubstract(editor) {
     <div><label>Resta</label><input type="text" disabled=true df-value></div>
     `;
     const data = { "value": '0' };
-    editor.addNode('substract', 2, 1, 200, 200, 'nodeSubstract nodeDraw', data, html);
+    editor.addNode('substract', 2, 1, 50, 200, 'nodeSubstract nodeDraw', data, html);
 
 }
 
@@ -29,7 +29,7 @@ export function createNodeMultiplication(editor) {
     <div><label>Multiplicación</label><input type="text" disabled=true df-value></div>
     `;
     const data = { "value": '0' };
-    editor.addNode('multiplication', 2, 1, 250, 100, 'nodeMultiplication nodeDraw', data, html);
+    editor.addNode('multiplication', 2, 1, 50, 250, 'nodeMultiplication nodeDraw', data, html);
 }
 
 export function createNodeDivision(editor) {
@@ -37,7 +37,7 @@ export function createNodeDivision(editor) {
     <div><label>División</label><input type="text" disabled=true df-value></div>
     `;
     const data = { "value": '0' };
-    editor.addNode('division', 2, 1, 300, 100, 'nodedivision nodeDraw', data, html);
+    editor.addNode('division', 2, 1, 50, 300, 'nodedivision nodeDraw', data, html);
 }
 
 export function createNodeVari(editor) {
@@ -50,7 +50,7 @@ export function createNodeVari(editor) {
     </div>
     `;
     const data = { "name": '', "value" : '0' };
-    editor.addNode('vari', 1, 1, 100, 100, 'nodevari nodeDraw', data, html);
+    editor.addNode('vari', 1, 1, 50, 50, 'nodevari nodeDraw', data, html);
 }
 
 export function createNodeAssign(editor) {
@@ -58,6 +58,6 @@ export function createNodeAssign(editor) {
     <div><label>Asignación</label></div>
     `;
     const data = { data : 0}
-    editor.addNode('assign', 1, 1, 150, 100, 'nodeassign nodeDraw', data, html);
+    editor.addNode('assign', 1, 1, 50, 100, 'nodeassign nodeDraw', data, html);
 }
 

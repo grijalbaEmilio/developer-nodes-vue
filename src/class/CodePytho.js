@@ -1,19 +1,22 @@
 export default class CodePitho {
 
     constructor(StringData) {
+        StringData != 'editor'
+        ? 
         this.nodes = JSON.parse(StringData)
+        :
+        this.nodes = {}
         //console.log(this.nodes);
     }
 
     getVarisDeclare() {
-        let result = ''
+        let result = []
         for (const key in this.nodes) {
             if (this.nodes[key].name === "vari") {
                 //console.log(this.#variDeclarateString(this.nodes[key])); 
-                result += "\n" +this.#variDeclarateString(this.nodes[key]) 
+                result.push(this.#variDeclarateString(this.nodes[key]))
             }
         }
-        console.log(result);
         return result
     }
 
@@ -67,6 +70,8 @@ export default class CodePitho {
         'multiplication' : ' * ',
         'division' : ' / '
     }
+
+    
 
 
 }

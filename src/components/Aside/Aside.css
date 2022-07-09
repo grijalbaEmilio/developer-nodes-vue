@@ -2,7 +2,8 @@
     position: fixed;
     right : 0;
     z-index: 90;
-    height: 100vh;
+    top : 0;
+    bottom: 0;
     width: 0px;
     background-color: var(--aside-content-color);
     display: flex;
@@ -27,6 +28,15 @@
 .aside-content{
     padding: 15px;
     display: none;
+    height: 100%;
+}
+
+.code-python{
+    border: 1px solid white;
+    border-radius : 5px;
+    height: 100%;
+    margin : 20px;
+    padding: 30px;
 }
 
 .hidden-aside{
@@ -45,4 +55,9 @@
     width: 100%;
     font-size: 1.5rem;
     color : var(--aside-color-title-text)
+}
+
+.vari{
+    color : white;
+    margin : 5px 0px;
 }

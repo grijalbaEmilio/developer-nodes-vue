@@ -1,6 +1,7 @@
 #draw{
     display: flex;
     flex-direction: column;
+    margin : 120px 0 0 0;
 }
 
 .main-path{
@@ -21,12 +22,23 @@ input{
 .buttons{
     display: flex;
     position: fixed;
-    top : 30px;
+    top : 50px;
     flex-direction: row;
     z-index: 80;
     width: 100%;
-    justify-content: center;
+    justify-content: initial;
     flex-wrap : wrap;
+    margin : 0 20px;
+}
+
+.function-back{
+    top : 5px;
+}
+
+.buttons > .buttons-function-back{
+    background-color: var(--button-success-color) ;
+    color: var(--button-info-color-text);
+    border : 2px solid var(--button-info-color-text);
 }
 
 .buttons > button{
@@ -40,6 +52,12 @@ input{
     border : 2px solid var(--button-info-color-text);
 }
 
+.buttons > .buttons-function-back:hover{
+    background-color : var(--button-info-color-hover);
+    color: var(--button-success-color);
+    border : 2px solid var(--button-success-color);
+}
+
 .buttons > button:hover{
     transition: .5s ;
     background-color : var(--button-info-color-hover);
@@ -47,6 +65,10 @@ input{
     border : 2px solid var(--button-info-color-text-hover);
     padding : 1px 7px;
     font-size: 1.4rem;
+}
+
+.buttons-function-back{
+  background-color: aqua;   
 }
 
 .nodeDraw{
