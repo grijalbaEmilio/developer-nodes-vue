@@ -4,22 +4,28 @@
     --button-info-color-text : white;
     --button-info-color-text-hover : #0084ff;
     --button-success-color : #2c9223;
+    --button-danger : #aa0101;
+    --button-danger-hover : #740000;
     --input-color : white;
     --input-color-text : black;
-    --button-aside-color : #241B2F;
-    --button-aside-color-text : white;
-    --aside-content-color : #241B2F;
-    --aside-color-title-text : #d8d8d8;
-    --background-modal : #111229e5;
+    --button-aside-color : #8a8989de;
+    --button-aside-color-text : #0c052b;
+    --aside-content-color : #8a8989de;
+    --aside-color-title-text : #0c052b;
+    --background-modal : #8a8989a1;
+    --background-header : #8a8989a1;
+  
 }
 
 #app{
     font-family: 'Montserrat', sans-serif;
     height: 100vh;
+    background-image: url('./assets/backgroundMain.jpg');
 }
 
 #drawflow, .drawflow, body{
     height: 100vh;
+    
   }
   
   body{

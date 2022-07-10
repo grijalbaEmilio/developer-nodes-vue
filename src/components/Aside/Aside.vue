@@ -1,6 +1,6 @@
 <template>
     <div class="aside">
-        <button class="aside-button" v-on:click="toggleContentVisivility">{{iconAside}}</button>
+        <button class="aside-button" v-on:click="toggleContentVisivility"> <b>{{iconAside}}</b></button>
         <div class="aside-content">
             <p class="asside-title">Código Python</p>
 

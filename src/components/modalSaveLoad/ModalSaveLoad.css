@@ -1,9 +1,9 @@
-.modal-save-load{
-    position : fixed;
-    left : 0;
-    right : 0;
-    top : 0;
-    bottom : 0;
+.modal-save-load {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
     z-index: 90;
     background-color: var(--background-modal);
     display: flex;
@@ -11,25 +11,22 @@
     align-items: center;
 }
 
-.modal-content{
-    width: 700px;
-    height: 400px;
+.modal-content {
     margin: 20px;
     background-color: white;
     border-radius: 10px;
     padding: 10px;
-
-
+    overflow-y: auto;
 }
 
-#close-modal{
+#close-modal {
     background-color: var(--background-modal);
-    color : white;
+    color: white;
     position: absolute;
     font-size: 1.5rem;
-    padding: 5px ;
+    padding: 5px;
     height: 20px;
-    width : 20px;
+    width: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,6 +34,73 @@
     cursor: pointer;
 }
 
-.saved-programs{
-    margin : 35px 0 0 0;
+.saved-programs {
+    margin: 45px 40px 0 40px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.title-modal {
+    align-self: center;
+}
+
+.form {
+    margin: 20px 0 40px 0;
+}
+
+.form label {
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+}
+
+.name-program-li {
+    margin-right: 25px;
+}
+
+.save-button {
+    width: min-content;
+    margin-left: 0 !important;
+}
+
+.option-program {
+    margin: 0 10px;
+    padding: 5px 15px;
+    border: none;
+    font-size: 1.2rem;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid gray .1px;
+    border-top: solid gray 1px;
+}
+
+.name-program-save {
+    border: 1px solid gray;
+    color: #3a3a3a;
+    margin-top: 5px;
+}
+
+.button-modal {
+    padding: 5px 12px;
+    font-size: 1.1rem;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    color: var(--button-info-color-text);
+}
+
+.button-modal:hover {
+    opacity: .7;
+}
+
+.load-button,
+.save-button {
+    background-color: var(--button-info-color);
+}
+
+.delete-button {
+    background-color: var(--button-danger);
 }
