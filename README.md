@@ -1,9 +1,9 @@
-# proyect_uno
+# developer-nodes
 
 ## Project setup
-```
+`
 npm install
-```
+`
 
 ### Compiles and hot-reloads for development
 ```
