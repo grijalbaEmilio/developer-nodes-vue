@@ -70,7 +70,6 @@ setTimeout(() => {
         nodeAssign(editor)
         removeDuplicateInputsOutputs(editor)
         nodevari(editor)
-
     })
 }, 100);
 
