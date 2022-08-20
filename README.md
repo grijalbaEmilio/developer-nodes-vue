@@ -2,43 +2,49 @@
 
 <img src="src/assets/readme/cap2.gif" alt="vueImg"/>
 
-## Project setup
-`
-npm install
-`
 
-### Compiles and hot-reloads for development
-``
+## Install dependencies
+
+```
+npm i
+```
+### or
+
+```
+yarn
+```
+
+### Run in development
+```
 npm run serve
-``
+```
+#### or
+
+```
+yarn serve
+```
+
 
 ### Compiles and minifies for production
 ````
 npm run build
 ````
 
+#### or
+
+```
+yarn build
+```
+
 ### Lints and fixes files
 ```
 npm run lint
 ```
+#### or
 
-## Example code
-```java
-    package com.exampel.app;
-
-    public static void main( String[] args){
-        System.out.println("pintelas pa");
-    }
+```
+yarn lint
 ```
 
-
-### Customize configuration
-See [DEMO](http://localhost:3000).
-
-
-use
-[AllowContentEncoding]
-
-defin
-[AllowContentEncoding]: https://pkg.go.dev/github.com/go-chi/chi/middleware#AllowContentEncoding
-
+## see in production
+**[DEMO](http://localhost:3000).**
