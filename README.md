@@ -47,4 +47,4 @@ yarn lint
 ```
 
 ## see in production
-**[DEMO](http://localhost:3000).**
+**[DEMO](https://heroic-tulumba-2ca0b8.netlify.app/).**
