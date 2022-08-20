@@ -1,5 +1,7 @@
 # developer-nodes
 
+<img src="src/assets/logo.png" alt="vueImg"/>
+
 ## Project setup
 `
 npm install
