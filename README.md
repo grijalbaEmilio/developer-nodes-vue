@@ -14,33 +14,33 @@ npm i
 yarn
 ```
 
-### Run in development
+## Run in development
 ```
 npm run serve
 ```
-#### or
+### or
 
 ```
 yarn serve
 ```
 
 
-### Compiles and minifies for production
+## Compiles and minifies for production
 ````
 npm run build
 ````
 
-#### or
+### or
 
 ```
 yarn build
 ```
 
-### Lints and fixes files
+## Lints and fixes files
 ```
 npm run lint
 ```
-#### or
+### or
 
 ```
 yarn lint
