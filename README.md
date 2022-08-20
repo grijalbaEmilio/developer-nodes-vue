@@ -1,6 +1,6 @@
 # developer-nodes
 
-<img src="src/assets/readme/cap1.png" alt="vueImg"/>
+<img src="src/assets/readme/cap2.gif" alt="vueImg"/>
 
 ## Project setup
 `
