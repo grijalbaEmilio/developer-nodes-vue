@@ -1,6 +1,6 @@
 # developer-nodes
 
-<img src="src/assets/logo.png" alt="vueImg"/>
+<img src="src/assets/readme/cap1.png" alt="vueImg"/>
 
 ## Project setup
 `
@@ -22,5 +22,23 @@ npm run build
 npm run lint
 ```
 
+## Example code
+```java
+    package com.exampel.app;
+
+    public static void main( String[] args){
+        System.out.println("pintelas pa");
+    }
+```
+
+
 ### Customize configuration
 See [DEMO](http://localhost:3000).
+
+
+use
+[AllowContentEncoding]
+
+defin
+[AllowContentEncoding]: https://pkg.go.dev/github.com/go-chi/chi/middleware#AllowContentEncoding
+
